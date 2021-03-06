@@ -1,0 +1,10 @@
+<view class="content">
+	<view class="title">
+		<h1>布置作业</h1>
+	</view>
+	<form bindsubmit="submit">
+		<input placeholder="在这里输入作业的标题" class="inputBox" name="header"/>
+		<picker mode="date" value="{{deadline}}" bindchange="setDeadline" class="selectorBox" name="ddl">截止日期：{{deadline}}</picker>
+		<button type="primary" form-type="submit">确认</button>
+	</form>
+</view>

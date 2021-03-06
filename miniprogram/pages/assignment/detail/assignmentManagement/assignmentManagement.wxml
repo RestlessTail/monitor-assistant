@@ -1,0 +1,40 @@
+<view class="content">
+	<view class="title">
+		<h1>{{header}}</h1>
+	</view>
+	<view class="alert">
+		截止日期：{{deadline}}
+	</view>
+	<h2>提交名单</h2>
+	<view class="list">
+		<view wx:for="{{commits}}" class="list_item"> {{item.student_id}} </view>
+	</view>
+	<block wx:if="{{commits.length==0}}">
+    	<view class="alert">暂无提交记录</view>
+	</block>
+	<h2>未提交名单</h2>
+	<view class="list">
+		<view wx:for="{{uncommitted}}" class="list_item"> {{item}} </view>
+	</view>
+	<block wx:if="{{uncommitted.length==0}}">
+    	<view class="alert">已全部提交</view>
+	</block>
+	<view class="buttonComboBox">
+		<view class="buttonBox">
+			<button type="primary" bindtap="download">下载作业</button>
+		</view>
+		<view class="buttonBox">
+			<button type="warn" bindtap="show_hidden_box">删除作业</button>
+		</view>
+	</view>
+	<view wx:if="{{removeConfirm}}" class="hiddenBox">
+		<view class="longAlert">
+			注意！删除作业不仅会删除作业记录，连服务器上保存的已提交的作业也会一并删除。所有文件一经删除<text class="bold">无法恢复</text>！如果你仍然要删除，请在下面输入作业的名称：<text class="bold">{{header}}</text>
+		</view>
+		<form bindsubmit="submit">
+			<input class="inputBox" name="confirm"/>
+			<button type="warn" form-type="submit">继续</button>
+			<button bindtap="hide" type="default">取消</button>
+		</form>
+	</view>
+</view>

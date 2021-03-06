@@ -1,0 +1,36 @@
+<view class="content">
+	<block wx:if="{{logged}}">
+		<block wx:if="{{binding}}">
+			<view class="title">
+				<h1>收/交作业</h1>
+			</view>
+			<h2>作业清单</h2>
+			<view class="list">
+				<view wx:for="{{assignment_available}}" class="list_item" data-item="{{item}}" bindtap="assignmentDetails"> {{item.header}} </view>
+			</view>
+			<block wx:if="{{assignment_available.length==0}}">
+		    	<view class="alert">暂无需要提交的作业!</view>
+			</block>
+			<view wx:if="{{user_access > 0}}" class="buttonComboBox">
+				<view class="buttonBox">
+					<button type="primary" bindtap="new_assignment">布置作业</button>
+				</view>
+				<view class="buttonBox">
+					<button type="default" bindtap="refresh">刷新</button>
+				</view>
+			</view>
+		</block>
+		<block wx:else>
+			<h1>账号未绑定</h1>
+			<view class="plain_text">
+				我们需要通过你的学生信息来确认身份、提交作业，因此请先完成账号绑定。
+			</view>
+		</block>
+	</block>
+	<block wx:else>
+		<h1>未登录</h1>
+		<view class="plain_text">
+			我们没有检测到您的登录信息，请尝试返回主页重新登录。如果问题依然存在，请与管理员联系。
+		</view>
+	</block>
+</view>

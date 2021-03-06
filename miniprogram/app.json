@@ -1,0 +1,19 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/assignment/index/index",
+		"pages/assignment/newAssignment/newAssignment",
+		"pages/assignment/detail/detail",
+		"pages/assignment/detail/assignmentManagement/assignmentManagement",
+		"pages/account/account"
+	],
+	"window": {
+		"backgroundColor": "#F6F6F6",
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#F6F6F6",
+		"navigationBarTitleText": "19临床II(5+3)",
+		"navigationBarTextStyle": "black"
+	},
+	"sitemapLocation": "sitemap.json",
+	"style": "v2"
+}

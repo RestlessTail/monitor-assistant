@@ -1,0 +1,16 @@
+<view class="content">
+	<view class="title">
+		<h1>{{header}}</h1>
+	</view>
+	<view class="alert">
+		{{commit?"已提交，":"未提交，"}}截止日期：{{deadline}}
+	</view>
+	<view class="buttonComboBox">
+		<view class="buttonBox">
+			<button type="primary" bindtap="upload">上传作业</button>
+		</view>
+		<view wx:if="{{user_access > 0}}" class="buttonBox">
+			<button type="default" bindtap="assignment_management">作业管理</button>
+		</view>
+	</view>
+</view>

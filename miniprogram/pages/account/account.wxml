@@ -1,0 +1,38 @@
+<view class="content">
+	<block wx:if="{{logged}}">
+		<block wx:if="{{binding}}">
+			<h1>您的账号已绑定</h1>
+			<view class="plain_text">
+				您的微信账号已经与您的个人信息关联。
+			</view>
+			<view class="inputBox">
+				姓名：{{student_name}}
+			</view>
+			<view class="inputBox">
+				学号：{{student_id}}
+			</view>
+			<button type="primary" bindtap="unlink">解除绑定</button>
+		</block>
+		<block wx:else>
+			<view class="title">
+				<h1>让我们来绑定你的账号</h1>
+			</view>
+			<view class="plain_text">
+				将您的微信账号和学号、姓名绑定，这样就可以通过微信账号访问您的个人信息。绑定只需要进行一次。
+			</view>
+			<form bindsubmit="bindAccount">
+				<input class="inputBox" placeholder="请输入您的姓名" name="form_name"/>
+				<input class="inputBox" placeholder="请输入您的学号" name="form_id"/>
+				<button form-type="submit" type="primary">完成绑定</button>
+			</form>
+		</block>
+	</block>
+	<block wx:else>
+		<view class="title">
+			<h1>登录以绑定你的账号</h1>
+		</view>
+		<view class="plain_text">
+			要进行绑定，我们必须借助您的微信账号。回到主页登录以继续绑定。
+		</view>
+	</block>
+</view>
