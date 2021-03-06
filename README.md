@@ -1,12 +1,5 @@
-# 云开发 quickstart
+# Monitor assistant
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
-
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
-
-## 参考文档
-
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
-
+Actually the Wechat miniprogram is initially written for the student in charge of study instead of the monitor, but I thought the name 'the student in charge of study assistant' is too long for a repository, so, it is called monitor assistant.
+The Wechat miniprogram can help the student in charge of study to collect homework, each document renamed with a particular name. The documents are packed as a compressed file and the administrators can download all of the documents easily.
+I really want to write this document in Chinese, because it is too hard for me to explain the specific functions of the miniprogram with my poor English, and I guess that most of the Wechat users are native speakers of Chinese.
