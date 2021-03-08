@@ -1,0 +1,46 @@
+<view class="content">
+	<h1>本周课表</h1>
+	<button type="default" bindtap="dayView">回到今天</button>
+	<view wx:if="{{allClass[0].length>0}}" class="dayField">
+		<text class="subtitle">星期天\n\n</text>
+		<view wx:for="{{allClass[0]}}" class="list_item" bindtap="jump" data-subjectID="{{item.ID}}">
+			<text>{{item.Subject + "\n第" + item.SessionBegin + "-" + item.SessionEnd + "节\n地点：" + item.Location}}\n\n</text>
+		</view>
+	</view>
+	<view wx:if="{{allClass[1].length>0}}" class="dayField">
+		<text class="subtitle">星期一\n\n</text>
+		<view wx:for="{{allClass[1]}}" class="list_item" bindtap="jump" data-subjectID="{{item.ID}}">
+			<text>{{item.Subject + "\n第" + item.SessionBegin + "-" + item.SessionEnd + "节\n地点：" + item.Location}}\n\n</text>
+		</view>
+	</view>
+	<view wx:if="{{allClass[2].length>0}}" class="dayField">
+		<text class="subtitle">星期二\n\n</text>
+		<view wx:for="{{allClass[2]}}" class="list_item" bindtap="jump" data-subjectID="{{item.ID}}">
+			<text>{{item.Subject + "\n第" + item.SessionBegin + "-" + item.SessionEnd + "节\n地点：" + item.Location}}\n\n</text>
+		</view>
+	</view>
+	<view wx:if="{{allClass[3].length>0}}" class="dayField">
+		<text class="subtitle">星期三\n\n</text>
+		<view wx:for="{{allClass[3]}}" class="list_item" bindtap="jump" data-subjectID="{{item.ID}}">
+			<text>{{item.Subject + "\n第" + item.SessionBegin + "-" + item.SessionEnd + "节\n地点：" + item.Location}}\n\n</text>
+		</view>
+	</view>
+	<view wx:if="{{allClass[4].length>0}}" class="dayField">
+		<text class="subtitle">星期四\n\n</text>
+		<view wx:for="{{allClass[4]}}" class="list_item" bindtap="jump" data-subjectID="{{item.ID}}">
+			<text>{{item.Subject + "\n第" + item.SessionBegin + "-" + item.SessionEnd + "节\n地点：" + item.Location}}\n\n</text>
+		</view>
+	</view>
+	<view wx:if="{{allClass[5].length>0}}" class="dayField">
+		<text class="subtitle">星期五\n\n</text>
+		<view wx:for="{{allClass[5]}}" class="list_item" bindtap="jump" data-subjectID="{{item.ID}}">
+			<text>{{item.Subject + "\n第" + item.SessionBegin + "-" + item.SessionEnd + "节\n地点：" + item.Location}}\n\n</text>
+		</view>
+	</view>
+	<view wx:if="{{allClass[6].length>0}}" class="dayField">
+		<text class="subtitle">星期六\n\n</text>
+		<view wx:for="{{allClass[6]}}" class="list_item" bindtap="jump" data-subjectID="{{item.ID}}">
+			<text>{{item.Subject + "\n第" + item.SessionBegin + "-" + item.SessionEnd + "节\n地点：" + item.Location}}\n\n</text>
+		</view>
+	</view>
+</view>

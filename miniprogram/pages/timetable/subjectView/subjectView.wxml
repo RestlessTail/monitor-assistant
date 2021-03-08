@@ -1,0 +1,14 @@
+<view class="content">
+	<h1>{{classInfo.Subject}}</h1>
+	<view class="infoField">
+		<text>第{{classInfo.Order}}次课\n\n</text>
+		<text>第{{classInfo.Week}}周\n\n</text>
+		<text>第{{classInfo.SessionBegin}}-{{classInfo.SessionEnd}}节\n\n</text>
+		<text>教师：{{classInfo.Teacher}}\n\n</text>
+		<text>上课日期：{{classInfo.Date}}\n\n</text>
+		<text>上课地点：{{classInfo.Location}}\n\n</text>
+		<text>课程内容：{{classInfo.Content}}\n\n</text>
+		<text>要求：{{classInfo.Requirement}}\n\n</text>
+		<text>备注：{{classInfo.Notes}}\n\n</text>
+	</view>
+</view>

@@ -5,6 +5,9 @@
 		"pages/assignment/newAssignment/newAssignment",
 		"pages/assignment/detail/detail",
 		"pages/assignment/detail/assignmentManagement/assignmentManagement",
+		"pages/timetable/dayView/dayView",
+		"pages/timetable/subjectView/subjectView",
+		"pages/timetable/weekView/weekView",
 		"pages/account/account"
 	],
 	"window": {

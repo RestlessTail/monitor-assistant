@@ -1,0 +1,13 @@
+<view class="content">
+	<block wx:if="{{timetable.length > 0}}">
+		<h1>今天有{{timetable.length}}节课</h1>
+		<view wx:for="{{timetable}}" class="list_item" bindtap="jump" data-subjectID="{{item.ID}}">
+			<text>{{item.Subject + "\n第" + item.SessionBegin + "-" + item.SessionEnd + "节\n地点：" + item.Location}}</text>
+		</view>
+	</block>
+	<blcok wx:else>
+		<h1>今天没有课</h1>
+	</blcok>
+	<button type="default" bindtap="refresh">刷新</button>
+	<button type="default" bindtap="weekView">查看本周课表</button>
+</view>

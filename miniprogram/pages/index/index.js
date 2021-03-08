@@ -33,6 +33,7 @@ Page({
 		requestResult: '',
 		service_available: [
 			{display: "收/交作业", jump_to: "../assignment/index/index"}, 
+			{display: "查看课程表", jump_to: "../timetable/dayView/dayView"}, 
 			{display: "绑定账号", jump_to: "../account/account"}
 		],
 		logged: false
